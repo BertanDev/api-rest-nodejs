@@ -19,16 +19,22 @@ em seguida:
 npm run dev
 ```
 
+para iniciar o banco de dados sqlite local:
+
+```
+npm run knex migrate:latest
+```
+
 > **Note**      
 > A aplicação roda por padrão na porta ```3333```
 
 ## 💠 Rotas da api
-- GET ```/transactions``` retorna todas as transações do usuário
-- GET ```/transactions/summary``` retorna o resumo de todas as transações do usuário
-- GET ```/transactions/:id``` retorna os dados de uma transação específica do usuário
-- POST ```/transactions``` cria uma transação para aquele usuário
+- [x] GET ```/transactions``` retorna todas as transações do usuário
+- [x] GET ```/transactions/summary``` retorna o resumo de todas as transações do usuário
+- [x] GET ```/transactions/:id``` retorna os dados de uma transação específica do usuário
+- [x] POST ```/transactions``` cria uma transação para aquele usuário
 
-segue a tipagem da transação:
+segue o tipagem do objeto para utilizar na rota de criação da transação:
 
 ```
 {
@@ -37,3 +43,16 @@ segue a tipagem da transação:
   type: 'credit' || 'debit'
 }
 ```
+
+## 🔱 Ferramentas utilizadas
+- Node JS com Fastify
+- TypeScript
+- Knex
+- Eslint
+- Vitest
+- Zod
+- Supertest
+- Dotenv
+- Sqlite3
+- Tsup
+
