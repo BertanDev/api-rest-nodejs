@@ -26,7 +26,7 @@ npm run knex migrate:latest
 ```
 
 > **Note**      
-> A aplicação roda por padrão na porta ```3333```
+> Deve adicionar um caminho DATABASE_URL no arquivo *.env.example* para direcionar a aplicação de onde criar o arquivo físico da database
 
 ## 💠 Rotas da api
 - [x] GET ```/transactions``` retorna todas as transações do usuário
@@ -56,3 +56,5 @@ segue o tipagem do objeto para utilizar na rota de criação da transação:
 - Sqlite3
 - Tsup
 
+> Foram criados testes para todas as rotas da aplicação --> [/test/transactions.spec.ts](./test/transactions.spec.ts)      
+> Utilizando um banco de dados separado do utilizado em desenvolvimento
